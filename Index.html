@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trulli 3D</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="stl_viewer.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="Map/mapdata.js"></script>
+    <script src="Map/countrymap.js"></script>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-custom" style="top: 0; z-index: 1030;">
+        <a class="navbar-brand" href="#start">
+          <img src="img/Logo.svg" alt="Logo" style="height: 30px;">
+          <span class="ml-2">Trulli 3D Druck</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#start">Start</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dienstleistung">Photogrammetrie </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#herstellung">3D Drucker</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#gallery">Produktbeispiele</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#proceed">Vorgehen</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+    <main>
+
+        <div class="hero-image" id="start">
+            <div class="hero-text">
+                <h1 id="start-text">Kreativität ohne Grenzen mit Trulli 3D Druck</h1>
+                <button id="start-button" class="contact-button startButton" onclick="openEmailClient()">Kontakt</button>
+            </div>
+        </div>
+        
+        <div class="wrapper row justify-content-center" style="background-color: #1e1e1e;">
+            <div class="col-12"><h1 id="dienstleistung" >Photogrammetrie  
+            </h1></div>
+        
+            <!-- First Section: 3D-Scanning -->
+           
+            <div class="col-12 col-xl-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hoIrqd761gw?autoplay=1&mute=1&loop=1&controls=0&playlist=hoIrqd761gw" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                </div>
+            </div>
+            <div class="col-12 col-xl-6 text-left textbox">
+                <h1>360° Video</h1>
+                <p>
+                    Wir erstellen qualitativ hochwertige Video Aufnahmen von ihrem gewünschten Objekt.
+                </p>
+            </div>
+            <!-- Second Section: Prototypen und Serienproduktion with STL Viewer -->
+            <div class="col-12 col-xl-6 order-xl-3" style="">
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+                    <spline-viewer url="https://prod.spline.design/4chUkR9QQt8rg9Uj/scene.splinecode"></spline-viewer>
+            </div>
+            
+            <div class="col-12 col-xl-6 order-xl-4 text-left textbox">
+                <h1>3D Scanning</h1>
+                <p>
+                    Mit Hilfe der Photogeometrie schützen wir historische Gebäude und erstellen digitale Archive für die Restaurierung wertvoller Kulturgüter
+                </p>
+            </div>
+
+            
+            <!-- Third Section: Design-Unterstützung und 3D-Dateien -->
+            <div class="col-12 col-xl-6 order-xl-5">
+                <img src="img/SchlossSargans.png" class="img-fluid">
+            </div>
+            
+            <div class="col-12 col-xl-6 order-xl-6 text-left textbox">
+                <h1>3D gedrucktes Produkt</h1>
+                <p>
+                    Jedes beliebige Objekt kann nun mithilfe unseres 3D-Druckers in ein greifbares, physisches Produkt verwandelt werden
+                </p>
+                
+            </div>
+            
+        </div>
+        
+
+       
+          <img src="img/wave1.svg" style="background-color: #1e1e1e;margin: -3px 0px;">
+       
+          <div class="wrapper row justify-content-center" id="herstellung">
+            <div class="col-12">
+                <h1>Prusa XL</h1>
+            </div>
+            <!-- First Section: Prusa XL -->
+            <div class="col-12 col-md-6 text-left textbox" style="margin-bottom: 20px;">
+                <p>Bei uns erhalten Sie hochwertige 3D-gedruckte Teile, die genau auf Ihre Wünsche und Bedürfnisse angepasst werden. Mit unserem Prusa XL-Drucker bieten wir Ihnen die Möglichkeit, komplexe und individuelle Projekte zu realisieren:</p>
+                <p>Mit einem Druckvolumen von 300 x 300 x 300 mm sind wir in der Lage, auch größere Teile in einem einzigen Durchgang zu fertigen.</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <img src="img/druck.png" style="padding-bottom: 50px; "class="img-fluid">
+            </div>
+            
+        </div>
+        <img src="img/wave2.svg" style="background-color: #333333;margin: -3px 0px;">
+        <div class="wrapper" id="material">
+            <div class="row">
+                <div class="col-lg-12 textbox" style="margin-bottom: 50px;">
+                    <h1>5 Materialien, ein Druckprozess</h1> 
+                    <p>Durch die neueste Technologie ist es möglich, bis zu 5 verschiedene Materialien gleichzeitig zu drucken. So können wir für Sie Teile in mehreren Farben oder mit unterschiedlichen Materialeigenschaften herstellen. Es eignet sich ideal für funktionale Prototypen, robuste Bauteile oder dekorative Elemente.</p>
+                </div>
+                <div class="col-12" id="filaments" style="padding: 50px;">
+                    <img src="img/WHITEFILAMENT.svg" alt="White Filament" id="filament1">
+                    <img src="img/GREENFILAMENT.svg" alt="Green Filament" id="filament2">
+                    <img src="img/REDFILAMENT.svg" alt="Red Filament" id="filament3">
+                    <img src="img/BLUEFILAMENT.svg" alt="Blue Filament" id="filament4">
+                    <img src="img/YELLOWFILAMENT.svg" alt="Yellow Filament" id="filament5">
+                </div>
+                <div class="col-12">
+                    <h1>Plastikarten</h1>
+                </div>
+                
+                <!-- PLA -->
+                <div class="col-sm-6">
+                    <h2>PLA (Polylactic Acid)</h2>
+                    <ul>
+                        <li>preiswert</li>
+                        <li>Biologisch abbaubar</li>
+                        <li>Stark</li>
+                        <li><strong>Glasübergangstemperatur:</strong> 60-65°C</li>
+                    </ul>
+                </div>
+                
+                <!-- ABS -->
+                <div class="col-sm-6">
+                    <h2>ABS (Acrylonitrile Butadiene Styrene)</h2>
+                    <ul>
+                        <li>Stark und langlebig</li>
+                        <li>Hitzebeständig</li>
+                        <li>Glatte Oberfläche</li>
+                        <li><strong>Glasübergangstemperatur:</strong> 105°C</li>
+                    </ul>
+                </div>
+                
+                <!-- TPU -->
+                <div class="col-sm-6">
+                    <h2>TPU (Thermoplastic Polyurethane)</h2>
+                    <ul>
+                        <li>Elastisch</li>
+                        <li>Hohe Verschleißfestigkeit</li>
+                        <li>Stoßfest</li>
+                        <li><strong>Glasübergangstemperatur:</strong> -50°C bis -10°C</li>
+                    </ul>
+                </div>
+                
+                <!-- PETG -->
+                <div class="col-sm-6">
+                    <h2>PETG (Polyethylene Terephthalate Glycol)</h2>
+                    <ul>
+                        <li>Zäh und haltbar</li>
+                        <li>Wasserabweisend</li>
+                        <li>Einfach zu drucken</li>
+                        <li><strong>Glasübergangstemperatur:</strong> 80°C</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <img src="img/wave3.svg" style="background-color: #474747; margin: -3px 0px;">
+        <div class="wrapper" id="gallery">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12"><h1>Produktbeispiele</h1></div>
+                <div class="col-xl-6">
+                    <div id="stl_heart"><span class="text-3d">3D</span></div>
+                </div>
+                <img class="col-xl-6" src="img/Heart.png" style="padding-top: 40px; padding-bottom: 120px;">
+                <div class="col-xl-6">
+                    <div id="stl_basket"><span class="text-3d">3D</span></div>
+                </div>
+                <img class="col-xl-6" src="img/Basket.JPG" style="padding-top: 40px; padding-bottom: 120px;">
+                <div class="col-xl-6">
+                    <div id="stl_matterhorn"><span class="text-3d">3D</span></div>
+                </div>
+                <img class="col-xl-6" src="img/matterhorn.png" style="padding-top: 40px; padding-bottom: 120px;">
+            </div>
+          </div>
+          <img src="img/wave4.svg" style="background-color: #5C5C5C;margin: -3px 0px;">
+          <div class="wrapper" id="proceed">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12"><h1>Vorgehen</h1></div> 
+                <div class="col-12 col-sm-2 col-lg-4 order-lg-0"><img src="img/1.svg"></div>
+                <div class="col-10 col-lg-4 order-lg-3" style="padding-top: 20px; padding-top: 20px;">
+                    <p style="text-align: left;">Senden Sie uns Ihr Design oder spezifische Anforderungen für das gewünschte Produkt per E-Mail. Wenn Sie noch kein Design haben, hilft unser erfahrenes Team, Ihre Idee in ein druckfertiges 3D-Modell zu verwandeln. </p>
+                </div>
+                <div class="col-12 col-sm-2 col-lg-4 order-lg-1"><img src="img/2.svg"></div>
+                <div class="col-10 col-lg-4 order-lg-4" style="padding-top: 20px; padding-top: 20px;">
+                    <p style="text-align: left;">Nachdem wir Ihre Informationen erhalten haben, erstellen wir Ihnen eine detaillierte Offerte. Diese umfasst alle Kosten, inklusive Zeitaufwand, für die Umsetzung Ihres Projekts.</p>
+                </div>
+                <div class="col-12 col-sm-2 col-lg-4 order-lg-2"><img src="img/3.svg"></div>
+                <div class="col-10 col-lg-4 order-lg-5"style="padding-top: 20px; padding-top: 20px;">
+                    <p style="text-align: left;">Nach Bezahlung der Offerte beginnen wir mit der Produktion Ihres 3D-Objekts. Wir nutzen modernste Technologie, für eine präzise Herstellung. Nach erfolgreicher Produktion verpacken wir Ihr Produkt und senden es an Ihre Adresse.</p>
+                </div>
+            </div>
+            
+        </div>
+        <img src="img/wave5.svg" style="background-color: #707070;margin: -3px 0px;">
+        <div class="wrapper" id="contact" style="padding: 100px 20px;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div id="contact-image" class="col-12 col-md-8 text-center">
+                        <h1 style="font-size: 2.5rem; padding: 0px;">Kontakt</h1>
+                        <p>
+                            Sie haben eine Vision, wir haben die Technologie. Schreiben Sie uns und erfahren Sie, wie wir Ihre Entwürfe präzise und effizient in die Realität umsetzen können.
+                        </p>
+                        <button class="contact-button startButton" onclick="openEmailClient()">Kontaktiere uns</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="img/wave6.svg" style="background-color: #7D7D7D;margin: -3px 0px;">
+        <footer style="background-color: #898989; padding-bottom: 60px;">
+            &copy; 2024, Trulli 3D Druck <br>
+            <a href="Impressum.html" style="text-decoration: none; color: #fff;">Impressum</a>
+        </footer>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+    
+    <script>
+$(document).ready(function () {
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
+});
+var stl_viewer2 = new StlViewer(
+    document.getElementById("stl_heart"),
+    {
+        zoom: 200,
+        bgcolor: "yellow",
+        models: [
+            {
+                filename: "stl_files/Heart_Ligth.stl",
+                rotationx: 0,
+                rotationy: 0,
+                rotationz: 0,
+                color: "#DBBF90",
+                positionZ: 0,    // Default position
+                animation: {
+                    delta: {
+                        rotationx: 0,
+                        rotationy: 0, // Same rotation speed
+                        rotationz: 0,
+                        msec: 1000,     // Same rotation duration
+                        loop: true
+                    },
+                }
+            },
+            {
+                filename: "stl_files/Heart_Dark.stl",
+                rotationx: 0,
+                rotationy: 0,
+                rotationz: 0,
+                color: "#837357",
+                positionZ: 0,    // Default position
+                animation: {
+                    delta: {
+                        rotationx: 0,
+                        rotationy: 0, // Same rotation speed
+                        rotationz: 0,
+                        msec: 1000,     // Same duration
+                        loop: true
+                    }
+                }
+            }
+        ]
+    }
+);
+
+var stl_viewer4 = new StlViewer(
+    document.getElementById("stl_basket"),
+    {
+        zoom:500,
+        bgcolor: "yellow",
+        models: [
+            {
+                filename: "stl_files/basket.stl",
+                rotationx: 80,
+                rotationy: 0,
+                rotationz: -45,
+                color: "#1F1F1F",
+                positionZ: 0,    // Default position
+            }
+        ]
+    }
+);
+var stl_viewer6 = new StlViewer(
+    document.getElementById("stl_matterhorn"),
+    {
+
+        bgcolor: "yellow",
+        models: [
+            {
+                filename: "stl_files/Matterhorn.stl",
+                rotationx: -70,
+                rotationy: 0,
+                rotationz: 0,
+                x:0,y:0,z:0,
+                color: "#AEAFAA",
+                positionZ: 0,    // Default position
+            },
+        ]
+    }
+);
+    </script>
+</body>
+</html>

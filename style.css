@@ -1,0 +1,389 @@
+:root {
+    --primary-color: #FFD000;
+  }
+body, html {
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    line-height: 1.75;
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    color: #ffffff; /* Light text color */
+}
+#start{
+    padding-top: 60px;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: start;
+    overflow: hidden; /* Ensure the image doesn't cause overflow */
+}
+#wrapper {
+    position: relative; /* Add this */
+  }
+  
+  #map {
+    height: 100%; /* Make the map take up the full height of its parent */
+    width: 100%; /* Make the map take up the full width of its parent */
+  }
+/* Style for images in the gallery */
+.gallery-image {
+    width: 200px; /* Same width as STL viewer */
+    height: 200px; /* Same height as STL viewer */
+    object-fit: cover; /* Ensures that images cover the area */
+    margin: 0 auto; /* Centers the image */
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Center the columns */
+    flex-wrap: wrap; /* Allow columns to wrap */
+}
+
+.column {
+    -ms-flex: 50%; /* IE 10 */
+    flex: 50%;
+    text-align: center; /* Center text within columns */
+}
+.img-fluid {
+    max-height: 1000px;
+}
+  
+.textbox {
+    padding-top: 30px;
+    margin-bottom: 50px;
+
+}
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+  
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/Lithophane.png");
+  
+    /* Set a specific height */
+    height: 50%;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  #contact-image {
+    background-color: #898989;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/contact.JPG");
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+}
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+.startButton {
+    background-color: #FFD000;
+    z-index: 2; /* Higher z-index to place it in front of the image */
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#material h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#material ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#material ul li {
+    font-size: 1rem;
+    color: #cecece;
+    margin-bottom: 5px;
+}
+
+#material ul li strong {
+    color: #ffffff;
+}
+
+.startButton:hover {
+    background-color: #dddddd;
+}
+.section {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: start;
+    overflow: hidden; /* Ensure the image doesn't cause overflow */
+}
+
+h1 {
+	font-size: clamp(40px, 5vw, 72px);
+    letter-spacing: -0.03em;
+	line-height: 1.2;
+    margin: 0 0 14px 0;
+    font-weight: 700;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+p, li {
+	font-size: clamp(16px, 5vw, 20px);
+    line-height: 125%;
+    font-weight: 500;
+}
+h2 {
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  
+}
+h3 {
+    color: #cecece ;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #606060;
+}
+
+.logoContainer {
+    display: flex;
+    color: black;
+    
+}
+
+.logoContainer > span {
+    align-self: center;
+}
+
+#dropDown {
+    display: none;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    width: 100vw; /* Ensure dropdown covers full width */
+    background-color: #FFF500; /* Match dropdown background with navbar */
+}
+
+#dropDown.active {
+    display: block;
+}
+
+#dropDown > div {
+    border-bottom: solid 1px;
+    width: 100vw;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.feature, .contact, .gallery {
+    font-size: 2rem;
+    width: 100vw;
+    display: flex;
+}
+
+.contact {
+    background-color: #2e2e2e; /* Darker background for contact section */
+}
+
+.gallery img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.smallImage {
+    width: 300px;
+    height: 300px;
+}
+
+.filaments {
+    position: absolute;
+    top: 30vh; /* Adjust top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    opacity: 0; /* Initially hide filaments */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity change */
+    max-width: 1400px;
+}
+
+.filaments img {
+    height: 16vw; /* Adjust height of filaments */
+    max-height: 300px;
+}
+
+.filaments.visible {
+    opacity: 1; /* Show filaments when .visible class is applied */
+}
+
+.filament-text {
+    font-size: 1rem;
+    margin-top: 50vh;
+    position: relative; /* Ensure text scrolls with section */
+    z-index: 1; /* Ensure text is above filaments */
+}
+
+.contact-button {
+    background-color: #FFD000;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 90px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #dddddd;
+}
+
+.burgerContainer {
+    display: none; /* Initially hide the burger menu */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+
+
+
+#dienstleistung-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 10%; /* Adjust as needed to control the side margins */
+}
+
+.dienstleistung-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Ensure items take up 45% of the width each */
+    text-align: center;
+}
+
+.dienstleistung-item img {
+    width: 100%;
+    height: auto; /* Ensure images are responsive */
+}
+
+.dienstleistung-text {
+    margin-top: 10px; /* Add space between image and text */
+}
+
+.text-3d {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    bottom: 10px;  /* Adjusted for closer bottom alignment */
+    right: 10px;   /* Adjusted for closer right alignment */
+    text-shadow: 2px 2px 0 #bdc3c7, 
+                 4px 4px 0 #95a5a6,
+                 6px 6px 0 #7f8c8d;
+    z-index: 10; /* Ensure the text stays on top of other elements */
+}
+
+/* No need to change the position for #bike-3d since it inherits from .text-3d */
+#bike-3d {
+    bottom: 10px; /* Specific adjustment */
+    right: 10px;  /* Specific adjustment */
+}
+
+/* You can apply the same style for other STL elements */
+#stl_heart, #stl_basket, #stl_catapult, #stl_matterhorn {
+    position: relative; 
+	width: auto; 
+	height: 30vh; 
+	margin: 0 auto;
+            box-shadow: -20px -20px 43px 0 #FFFFFF inset,
+            20px 20px 43px 0 #FFFFFF inset
+}
+
+.wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+#dienstleistung{
+background-color: #1e1e1e;
+}
+#herstellung{
+    background-color: #333333;
+}
+#material{
+    background-color: #474747;
+}
+#gallery{
+    background-color: #5C5C5C;
+}
+#proceed{
+    background-color: #707070;
+}
+#contact{
+    background-color: #7D7D7D;
+}
+body { text-align: center; }
+
+        
+            .navbar-custom {
+                background-color: var(--primary-color);
+              }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2820 20, 20, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    @media only screen and (max-width: 1500px) {
+        .img-fluid {
+            max-height: 2000px;
+        }
+    }
+
+@media only screen and (max-width: 1000px) {
+
+    .wrapper{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+}
