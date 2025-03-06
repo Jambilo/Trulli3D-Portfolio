@@ -10,6 +10,10 @@ body, html {
     overflow-x: hidden; /* Prevent horizontal scroll */
     color: #ffffff; /* Light text color */
 }
+
+.carousel-caption h1 {
+    text-shadow: 5px 0 0 #000, 0 -5px 0 #000, 0 5px 0 #000, -5px 0 0 #000;
+  }
 #start{
     padding-top: 60px;
     position: relative;
@@ -26,7 +30,7 @@ body, html {
     position: relative; /* Add this */
   }
   
-  #map {
+  .map {
     height: 100%; /* Make the map take up the full height of its parent */
     width: 100%; /* Make the map take up the full width of its parent */
   }
@@ -373,11 +377,11 @@ body { text-align: center; }
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2820 20, 20, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
-    @media only screen and (max-width: 1500px) {
-        .img-fluid {
-            max-height: 2000px;
-        }
+@media only screen and (max-width: 1500px) {
+    .img-fluid {
+        max-height: 2000px;
     }
+}
 
 @media only screen and (max-width: 1000px) {
 

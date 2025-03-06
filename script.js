@@ -1,6 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // GSAP animations for logo
+    $('.carousel').on('touchstart', function(event){
+        const xClick = event.originalEvent.touches[0].pageX;
+        $(this).one('touchmove', function(event){
+            const xMove = event.originalEvent.touches[0].pageX;
+            const sensitivityInPx = 10;
     
+            if( Math.floor(xClick - xMove) > sensitivityInPx ){
+                $(this).carousel('next');
+            }
+            else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
+                $(this).carousel('prev');
+            }
+        });
+        $(this).on('touchend', function(){
+            $(this).off('touchmove');
+        });
+    });
+    
+    $('.carousel').carousel({
+        interval: 3000,
+        wrap: true
+      })
 
     // landing page ----------------------------------------------------------------------------------------------------------------------
     const landingTl = gsap.timeline({ paused: true });
@@ -38,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     featureTl.from("#filament3", { duration: 0.5, opacity: 0, x: 5000 }, "-=0.3");
     featureTl.from("#filament4", { duration: 0.5, opacity: 0, x: 5000 }, "-=0.3");
     featureTl.from("#filament5", { duration: 0.5, opacity: 0, x: 5000 }, "-=0.3");
-    featureTl.from(".filament-text", { duration: 0.5, opacity: 0, y: 50});
 
     const featureOptions = {
         root: null,
